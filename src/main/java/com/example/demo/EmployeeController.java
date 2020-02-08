@@ -46,6 +46,7 @@ import java.util.Optional;
                 {
                 Employee emp1 = employeeRepository.findById(id).orElseThrow (() -> new EmployeeNotFoundException(id));
                 employeeRepository.delete(emp1);
+                    System.out.println("Delete successful");
 
                 return ResponseEntity.ok().build();
                 }
